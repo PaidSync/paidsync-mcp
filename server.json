@@ -1,0 +1,12 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "ai.paidsync/ads-mcp",
+  "description": "Manage Google Ads, Meta Ads, LinkedIn Ads, and TikTok Ads via AI. 210+ tools for account audits, wasted spend detection, PMax insights, campaign management, and more. Agency-grade with MCC and Business Manager support.",
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://adsagent-805936384842.us-central1.run.app/mcp"
+    }
+  ]
+}
