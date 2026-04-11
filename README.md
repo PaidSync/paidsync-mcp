@@ -1,6 +1,6 @@
 # PaidSync.ai - MCP Server for Ads
 
-Manage Google Ads, Meta Ads, LinkedIn Ads, and TikTok Ads through AI. 210+ tools for account audits, campaign management, wasted spend detection, PMax insights, and more.
+Manage Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, and Google Tag Manager through AI. 240+ tools for account audits, campaign management, wasted spend detection, PMax insights, conversion tracking setup, and more.
 
 Works with **Claude**, **ChatGPT**, **Gemini**, **Claude Code**, **Cursor**, and **Windsurf**.
 
@@ -94,12 +94,23 @@ Try these:
 - Budget pacing
 - Automated rules
 
-### LinkedIn Ads
-- Campaign management
-- Audience targeting
-- Performance reporting
+### LinkedIn Ads (27+ tools)
+- Campaign and campaign group management
+- Creative management with image/video upload
+- Conversion tracking
+- Audience targeting with full RestLI 2.0 support
+- Performance reporting with dimension breakdowns
+- **Full write access** (competitors only offer read)
 
-### TikTok Ads
+### Google Tag Manager (38 tools)
+- Container audit and management
+- Tag, trigger, and variable CRUD
+- Workspace and version management
+- Publishing and environment control
+- **Composite tools**: setup_google_ads_conversion, setup_ga4_event, setup_form_tracking
+- **Only MCP server with GTM + Ads in one integration**
+
+### TikTok Ads (Coming Soon)
 - Campaign management
 - Creative management
 - Performance reporting
