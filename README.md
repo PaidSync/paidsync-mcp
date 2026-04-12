@@ -130,11 +130,45 @@ Try these:
 | Pro | $99/mo | 600 |
 | Max | $199/mo | 4,000 |
 
+## Blog (25 articles)
+
+### Guides
+- [How to Connect Google Ads to ChatGPT with MCP](https://paidsync.ai/blog/connect-google-ads-to-chatgpt)
+- [How to Connect Meta Ads to ChatGPT with MCP](https://paidsync.ai/blog/connect-meta-ads-to-chatgpt)
+- [How to Manage Google Ads, Meta Ads, and LinkedIn Ads with Claude](https://paidsync.ai/blog/manage-ads-with-claude)
+- [How to Manage LinkedIn Ads with AI Using PaidSync](https://paidsync.ai/blog/manage-linkedin-ads-with-ai)
+- [How to Run a Google Ads Audit with AI](https://paidsync.ai/blog/google-ads-audit-with-ai)
+- [How to Run a Meta Ads Audit with AI](https://paidsync.ai/blog/meta-ads-audit-with-ai)
+- [How to Set Up Google Ads Conversion Tracking with AI and GTM](https://paidsync.ai/blog/setup-google-ads-conversion-tracking-ai-gtm)
+- [How Agencies Manage Multiple Ad Accounts with AI and MCC](https://paidsync.ai/blog/agency-mcc-management-with-ai)
+- [How to Use AI for Ecommerce Ad Management](https://paidsync.ai/blog/ecommerce-ad-management-with-ai)
+- [How to Use Claude Code for PPC Management](https://paidsync.ai/blog/claude-code-ppc-management)
+- [How to Build a Cross-Platform Ad Report with AI](https://paidsync.ai/blog/cross-platform-ad-report-with-ai)
+- [How to Automate Negative Keyword Management with AI](https://paidsync.ai/blog/automate-negative-keywords-with-ai)
+
+### Comparisons
+- [Best MCP Servers for Google Ads and Meta Ads (2026)](https://paidsync.ai/blog/best-mcp-servers-google-ads-meta-ads)
+- [Best AI PPC Tools in 2026](https://paidsync.ai/blog/best-ai-ppc-tools-2026)
+- [AI Tools for PPC Agencies](https://paidsync.ai/blog/ai-tools-for-ppc-agencies)
+- [PaidSync vs Adspirer](https://paidsync.ai/blog/paidsync-vs-adspirer)
+- [PaidSync vs Pipeboard](https://paidsync.ai/blog/paidsync-vs-pipeboard)
+- [PaidSync vs Optmyzr](https://paidsync.ai/blog/paidsync-vs-optmyzr)
+- [PaidSync vs GoMarble](https://paidsync.ai/blog/paidsync-vs-gomarble)
+- [PaidSync vs Ryze AI](https://paidsync.ai/blog/paidsync-vs-ryze-ai)
+- [PaidSync vs Windsor.ai](https://paidsync.ai/blog/paidsync-vs-windsor-ai)
+- [PaidSync vs Revealbot](https://paidsync.ai/blog/paidsync-vs-revealbot)
+
+### Explainers
+- [What Is MCP and Why It Matters for Advertising](https://paidsync.ai/blog/what-is-mcp-advertising)
+- [AI vs Manual PPC Management in 2026](https://paidsync.ai/blog/ai-vs-manual-ppc-management)
+- [5 Ways AI Saves You 10+ Hours/Week on Google Ads](https://paidsync.ai/blog/ai-tasks-delegate-google-ads)
+
 ## Links
 
 - Website: [paidsync.ai](https://paidsync.ai)
 - Documentation: [paidsync.ai/docs](https://paidsync.ai/docs)
 - Compare: [paidsync.ai/compare](https://paidsync.ai/compare)
+- Changelog: [paidsync.ai/changelog](https://paidsync.ai/changelog)
 - Google Ads MCP: [paidsync.ai/google-ads-mcp](https://paidsync.ai/google-ads-mcp)
 - Blog: [paidsync.ai/blog](https://paidsync.ai/blog)
 - Book a Demo: [paidsync.ai/book-demo](https://paidsync.ai/book-demo)
