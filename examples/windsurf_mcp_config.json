@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "paidsync": {
+      "url": "https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY"
+    }
+  }
+}

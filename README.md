@@ -1,179 +1,283 @@
-# PaidSync.ai - MCP Server for Ads
+# PaidSync. The MCP for Running Ads with AI
 
-Manage Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, and Google Tag Manager through AI. 240+ tools for account audits, campaign management, wasted spend detection, PMax insights, conversion tracking setup, and more.
+> **The only MCP server that runs Google, Meta, LinkedIn, and TikTok ads with full edit access.** Plus GTM, GA4, and GSC. 380+ tools across 7 platforms in one conversation.
 
-Works with **Claude**, **ChatGPT**, **Gemini**, **Claude Code**, **Cursor**, and **Windsurf**.
+[![Meta Business Partner](https://img.shields.io/badge/Meta-Business%20Partner-1877F2)](https://paidsync.ai/meta-ads-mcp)
+[![LinkedIn Marketing Partner](https://img.shields.io/badge/LinkedIn-Marketing%20Partner-0A66C2)](https://paidsync.ai/linkedin-ads-mcp)
+[![TikTok Marketing Partner](https://img.shields.io/badge/TikTok-Marketing%20Partner-000000)](https://paidsync.ai/tiktok-ads-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-## Quick Start
+[paidsync.ai](https://paidsync.ai) · [Run Ads with AI](https://paidsync.ai/run-ads-with-ai) · [Compare](https://paidsync.ai/compare) · [Docs](https://paidsync.ai/docs)
+
+---
+
+## What this is
+
+Most MCP servers for ads are read-only. Google's native Google Ads MCP is read-only. ppc.io is read-only. GoMarble is read-only with write in private beta. Meta's AI Ads Connector edits Meta, nothing else.
+
+PaidSync is the one MCP that lets AI act. Across four ad platforms (Google, Meta, LinkedIn, TikTok), three tracking platforms (Google Tag Manager, Google Analytics 4, Google Search Console), in one conversation.
+
+That means your AI assistant does not just describe your campaigns. It pauses them. Creates them. Builds audiences. Sets up conversion tracking end to end. Compares ROAS across all four channels. In one chat.
+
+## Supported platforms
+
+| Platform | Tools | Access | Partner status |
+|---|---:|---|---|
+| Google Ads | 200+ | Full edit (incl. MCC) | Founder is Google Premier Partner (top 3% globally) |
+| Meta Ads (Facebook + Instagram) | 70+ | Full edit (incl. Business Manager system user tokens) | **Meta Business Partner** |
+| LinkedIn Ads | 30+ | Full WRITE access (most MCPs are read-only) | **LinkedIn Marketing Partner** |
+| TikTok Ads | full | Full edit (incl. advertiser switching) | **TikTok Marketing Partner** |
+| Google Tag Manager | 40+ | Full edit (tags, triggers, variables, workspaces) | n/a |
+| Google Analytics 4 | 25+ | Full edit (conversion events, audiences, custom dimensions) | n/a |
+| Google Search Console | 10+ | Read access (paid + organic blend reporting) | n/a |
+
+**Total: 380+ executable tools** in a single MCP endpoint.
+
+## Quick start
 
 ### 1. Sign up
 
-Create a free account at [paidsync.ai/signup](https://paidsync.ai/signup) and copy your MCP URL from the dashboard.
+Create a free account at [paidsync.ai/signup](https://paidsync.ai/signup). Free tier includes 15 API calls/month, enough to run your first audit and test the connection.
 
-### 2. Connect to your AI assistant
+### 2. Copy your MCP URL
 
-**Claude Desktop / claude.ai**
+From the [PaidSync dashboard](https://paidsync.ai/dashboard), copy your unique MCP server URL. It looks like:
 
-Add to your Claude MCP settings:
+```
+https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY
+```
+
+### 3. Add to your AI assistant
+
+PaidSync uses the open [Model Context Protocol (MCP)](https://modelcontextprotocol.io). Any MCP-compatible AI client works. Pick yours below.
+
+#### Claude Desktop
+
+Edit `claude_desktop_config.json` (Settings, Developer, Edit Config on Mac/Windows):
 
 ```json
 {
   "mcpServers": {
     "paidsync": {
-      "url": "https://adsagent-805936384842.us-central1.run.app/mcp?key=YOUR_API_KEY"
+      "url": "https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY"
     }
   }
 }
 ```
 
-**Claude Code (CLI)**
+Restart Claude Desktop. PaidSync appears as a connected tool.
+
+#### claude.ai (web)
+
+Settings, Integrations, Add MCP Server. Name: `PaidSync`. URL: `https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY`. Requires Claude Pro, Max, Team, or Enterprise.
+
+#### Claude Code (CLI)
 
 ```bash
-claude mcp add paidsync https://adsagent-805936384842.us-central1.run.app/mcp?key=YOUR_API_KEY
+claude mcp add paidsync https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY
 ```
 
-**ChatGPT**
+#### ChatGPT
 
-Go to ChatGPT Settings > MCP Servers > Add Server > paste your MCP URL.
+Settings, Connected Tools, Add MCP Server. Name: `PaidSync`. URL: `https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY`. Requires ChatGPT Plus or Pro.
 
-**Cursor / Windsurf**
+#### Gemini
 
-Add to your MCP config (`.cursor/mcp.json` or equivalent):
+Settings, Extensions, Add MCP Server. Name: `PaidSync`. URL: `https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY`.
+
+#### Cursor
+
+Edit `.cursor/mcp.json` in your workspace:
 
 ```json
 {
   "mcpServers": {
     "paidsync": {
-      "url": "https://adsagent-805936384842.us-central1.run.app/mcp?key=YOUR_API_KEY"
+      "url": "https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY"
     }
   }
 }
 ```
 
-### 3. Connect your ad accounts
+#### Windsurf
 
-Once connected, tell your AI:
+Edit `~/.codeium/windsurf/mcp_config.json`:
 
-- `"Connect my Google Ads account"` - starts OAuth flow
-- `"Connect my Facebook Ads"` - starts Meta OAuth flow
+```json
+{
+  "mcpServers": {
+    "paidsync": {
+      "url": "https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY"
+    }
+  }
+}
+```
 
-### 4. Start managing ads
+### 4. Connect your ad accounts
 
-Try these:
+Inside the PaidSync dashboard, connect Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, GTM, GA4, and GSC via OAuth. Each connection takes about 30 seconds. Agency users connect MCC and Business Manager once and gain access to every client account from chat.
 
-- `"Audit my Google Ads account"`
-- `"Find wasted spend in the last 30 days"`
-- `"List all my campaigns and their performance"`
-- `"What is my PMax campaign actually doing?"`
-- `"Create a search campaign for my new product"`
-- `"Pause all ad groups with CPA above $50"`
+---
 
-## What's Included
+## Why edit access matters
 
-### Google Ads (126+ tools)
-- Campaign management (Search, Display, Video, Shopping, PMax, Demand Gen)
-- Keyword research and management
-- Ad creation (RSA, RDA)
-- Bidding strategies
-- Audience targeting
-- Extensions and assets
-- Conversion tracking
-- Performance Max insights
-- **Account audit with scoring**
-- **Wasted spend detection**
-- **Quality Score analysis**
-- **Impression share analysis**
-- **Anomaly detection**
-- **Search term n-gram analysis**
+A read-only MCP can tell you that 17 ad groups have CPA over $50. It cannot pause them. You log in to the ad platform and click 17 times.
 
-### Meta Ads (57+ tools)
-- Campaign, ad set, and ad management
-- Audience creation (custom, lookalike, engagement)
-- Performance reporting with breakdowns
-- Creative management
-- Budget pacing
-- Automated rules
+PaidSync pauses them. It also tells you the estimated monthly savings. It also flags the keywords driving the high CPA. It also offers to pause those.
 
-### LinkedIn Ads (27+ tools)
-- Campaign and campaign group management
-- Creative management with image/video upload
-- Conversion tracking
-- Audience targeting with full RestLI 2.0 support
-- Performance reporting with dimension breakdowns
-- **Full write access** (competitors only offer read)
+The category of "AI for ads" is shifting from describing your data to running your account. PaidSync was built for the second category.
 
-### Google Tag Manager (38 tools)
-- Container audit and management
-- Tag, trigger, and variable CRUD
-- Workspace and version management
-- Publishing and environment control
-- **Composite tools**: setup_google_ads_conversion, setup_ga4_event, setup_form_tracking
-- **Only MCP server with GTM + Ads in one integration**
+---
 
-### TikTok Ads (Coming Soon)
-- Campaign management
-- Creative management
-- Performance reporting
+## Example prompts
 
-## Agency Features
+Once PaidSync is connected, paste any of these into Claude, ChatGPT, Gemini, or Cursor:
 
-- **Google Ads MCC**: Connect your manager account and switch between client accounts
-- **Meta Business Manager**: Use system user tokens for permanent access to all client accounts
-- **Bulk operations**: Manage multiple accounts in one conversation
+**Cross-channel work**
+
+```
+Compare ROAS across Google, Meta, LinkedIn, and TikTok for the last 30 days.
+Pause the worst-performing campaign on each platform.
+```
+
+```
+My Meta Ads ROAS just dropped 20%. Pull TikTok ROAS for the same date range
+and product set. Should I shift budget?
+```
+
+**Conversion tracking setup (only PaidSync does this)**
+
+```
+Set up purchase conversion tracking. Create the GA4 event, build the GTM tag
+and trigger, and link it to Google Ads as a primary conversion.
+```
+
+**Account audits**
+
+```
+Run a full audit on my Google Ads, Meta Ads, and LinkedIn Ads accounts.
+Tell me where I am wasting budget on each.
+```
+
+**Paid plus organic blends**
+
+```
+Show me Google Ads keywords I am paying for that I already rank organically
+for in Search Console. Pause them if they are not converting.
+```
+
+**TikTok**
+
+```
+Pause every TikTok ad group with CPA over $40 and less than 3 conversions
+in the last 14 days.
+```
+
+**LinkedIn B2B**
+
+```
+Compare LinkedIn cost-per-lead to Google Ads CPL for the same audience this quarter.
+Where am I getting more in-target leads?
+```
+
+**Agency workflow**
+
+```
+Switch to my client Google Ads MCC account, audit it, and email me a summary
+of the top 3 issues by Monday morning.
+```
+
+---
+
+## How PaidSync compares
+
+| | PaidSync | Google native MCP | Meta AI Ads Connector | ppc.io | Pipeboard | Adspirer | Ryze AI |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| Google Ads edit | yes | no, read-only | no | no, read-only | yes | yes | yes |
+| Meta Ads edit | yes | no | yes Meta-only | no | yes | yes | yes |
+| LinkedIn Ads edit | yes | no | no | no | no | yes | partial |
+| TikTok Ads edit | yes | no | no | no | no | yes | no |
+| GTM edit | yes | no | no | no | no | no | no |
+| GA4 edit | yes | no | no | no | no | no | partial |
+| End-to-end conversion tracking | yes | no | no | no | no | no | no |
+| Wasted-spend plus PMax audits | yes | no | no | no | no | no | partial |
+| MCP-based (any AI client) | yes | yes | yes | yes | yes | yes | no |
+| Free tier | yes | yes | yes | unknown | trial | trial | no |
+
+Full comparison: [paidsync.ai/compare](https://paidsync.ai/compare)
+
+---
 
 ## Pricing
 
-| Plan | Price | Tool Calls/Month |
-|------|-------|-----------------|
-| Limited | Free | 15 |
-| Plus | $49/mo | 150 |
-| Pro | $99/mo | 600 |
-| Max | $199/mo | 4,000 |
+| Plan | Monthly | Annual | API calls/mo |
+|---|---:|---:|---:|
+| Limited | Free | n/a | 15 |
+| Plus | $49 | $490 | 150 |
+| Pro | $99 | $999 | 600 |
+| Max | $199 | $2,000 | 4,000 |
 
-## Blog (25 articles)
+All platforms (Google, Meta, LinkedIn, TikTok, GTM, GA4, GSC), MCC support, and Business Manager system user tokens are included on every plan, including free.
 
-### Guides
-- [How to Connect Google Ads to ChatGPT with MCP](https://paidsync.ai/blog/connect-google-ads-to-chatgpt)
-- [How to Connect Meta Ads to ChatGPT with MCP](https://paidsync.ai/blog/connect-meta-ads-to-chatgpt)
-- [How to Manage Google Ads, Meta Ads, and LinkedIn Ads with Claude](https://paidsync.ai/blog/manage-ads-with-claude)
-- [How to Manage LinkedIn Ads with AI Using PaidSync](https://paidsync.ai/blog/manage-linkedin-ads-with-ai)
-- [How to Run a Google Ads Audit with AI](https://paidsync.ai/blog/google-ads-audit-with-ai)
-- [How to Run a Meta Ads Audit with AI](https://paidsync.ai/blog/meta-ads-audit-with-ai)
-- [How to Set Up Google Ads Conversion Tracking with AI and GTM](https://paidsync.ai/blog/setup-google-ads-conversion-tracking-ai-gtm)
-- [How Agencies Manage Multiple Ad Accounts with AI and MCC](https://paidsync.ai/blog/agency-mcc-management-with-ai)
-- [How to Use AI for Ecommerce Ad Management](https://paidsync.ai/blog/ecommerce-ad-management-with-ai)
-- [How to Use Claude Code for PPC Management](https://paidsync.ai/blog/claude-code-ppc-management)
-- [How to Build a Cross-Platform Ad Report with AI](https://paidsync.ai/blog/cross-platform-ad-report-with-ai)
-- [How to Automate Negative Keyword Management with AI](https://paidsync.ai/blog/automate-negative-keywords-with-ai)
+[Start free at paidsync.ai/signup](https://paidsync.ai/signup)
 
-### Comparisons
-- [Best MCP Servers for Google Ads and Meta Ads (2026)](https://paidsync.ai/blog/best-mcp-servers-google-ads-meta-ads)
-- [Best AI PPC Tools in 2026](https://paidsync.ai/blog/best-ai-ppc-tools-2026)
-- [AI Tools for PPC Agencies](https://paidsync.ai/blog/ai-tools-for-ppc-agencies)
-- [PaidSync vs Adspirer](https://paidsync.ai/blog/paidsync-vs-adspirer)
-- [PaidSync vs Pipeboard](https://paidsync.ai/blog/paidsync-vs-pipeboard)
-- [PaidSync vs Optmyzr](https://paidsync.ai/blog/paidsync-vs-optmyzr)
-- [PaidSync vs GoMarble](https://paidsync.ai/blog/paidsync-vs-gomarble)
-- [PaidSync vs Ryze AI](https://paidsync.ai/blog/paidsync-vs-ryze-ai)
-- [PaidSync vs Windsor.ai](https://paidsync.ai/blog/paidsync-vs-windsor-ai)
-- [PaidSync vs Revealbot](https://paidsync.ai/blog/paidsync-vs-revealbot)
+---
 
-### Explainers
-- [What Is MCP and Why It Matters for Advertising](https://paidsync.ai/blog/what-is-mcp-advertising)
-- [AI vs Manual PPC Management in 2026](https://paidsync.ai/blog/ai-vs-manual-ppc-management)
-- [5 Ways AI Saves You 10+ Hours/Week on Google Ads](https://paidsync.ai/blog/ai-tasks-delegate-google-ads)
+## Why PaidSync is different
 
-## Links
+1. **Edit access on every channel that matters.** Google's native MCP is read-only. Most competitors stop at one or two platforms. PaidSync runs four ad platforms plus GTM plus GA4 with full edit.
+
+2. **Conversion tracking by chat.** No other MCP server lets AI set up conversion tracking end to end. PaidSync's composite tools create the GA4 event, build the GTM tag and trigger, and link the conversion to Google Ads in one prompt.
+
+3. **Audit layer that finds money.** Scored account health, wasted-spend detection, PMax asset-group breakdowns, Quality Score analysis, anomaly detection, paid plus organic cannibalization checks against GSC. Built in. No other MCP offers this.
+
+4. **Built for paid media at scale.** Google Ads MCC, Meta Business Manager system user tokens, LinkedIn Marketing Partner write access, TikTok advertiser switching. Agency-grade across every channel.
+
+5. **Open MCP, not proprietary UI.** Use PaidSync from Claude, ChatGPT, Gemini, Cursor, Windsurf, Claude Code, Perplexity. Your AI tool of choice. We do not lock you in to a dashboard.
+
+---
+
+## Partner credentials
+
+- **Meta Business Partner**, verified via Meta Marketing Partner Program
+- **LinkedIn Marketing Partner**, full WRITE access (most MCPs do not have this)
+- **TikTok Marketing Partner**, verified TikTok integration
+- Founder Ahmed Ashraf, **Google Premier Partner** (top 3% globally), $500M+ in ad spend managed across a decade in paid media
+
+---
+
+## Documentation and resources
+
+- [Run Ads with AI](https://paidsync.ai/run-ads-with-ai), the pillar page for the dominance positioning
+- [Google Ads MCP details](https://paidsync.ai/google-ads-mcp)
+- [Meta Ads MCP details](https://paidsync.ai/meta-ads-mcp)
+- [LinkedIn Ads MCP details](https://paidsync.ai/linkedin-ads-mcp)
+- [TikTok Ads MCP details](https://paidsync.ai/tiktok-ads-mcp)
+- [Comparison: PaidSync vs every MCP ad server](https://paidsync.ai/compare)
+- [Blog (60+ articles on AI ad management)](https://paidsync.ai/blog)
+- [Docs](https://paidsync.ai/docs)
+- [Book a demo](https://paidsync.ai/book-demo)
+- [Changelog](https://paidsync.ai/changelog)
+- [llms.txt for AI engines](https://paidsync.ai/llms.txt) and [llms-full.txt](https://paidsync.ai/llms-full.txt)
+
+---
+
+## Connect
 
 - Website: [paidsync.ai](https://paidsync.ai)
-- Documentation: [paidsync.ai/docs](https://paidsync.ai/docs)
-- Compare: [paidsync.ai/compare](https://paidsync.ai/compare)
-- Changelog: [paidsync.ai/changelog](https://paidsync.ai/changelog)
-- Google Ads MCP: [paidsync.ai/google-ads-mcp](https://paidsync.ai/google-ads-mcp)
-- Blog: [paidsync.ai/blog](https://paidsync.ai/blog)
-- Book a Demo: [paidsync.ai/book-demo](https://paidsync.ai/book-demo)
+- Email: [support@paidsync.ai](mailto:support@paidsync.ai)
+- LinkedIn: [PaidSync](https://www.linkedin.com/company/paidsync-ai/)
+- Instagram: [@paidsync](https://www.instagram.com/paidsync)
+- Founder LinkedIn: [Ahmed Ashraf](https://www.linkedin.com/in/ahmedashrafppc/)
 
-## Support
+---
 
-- Email: support@paidsync.ai
-- Website: [paidsync.ai](https://paidsync.ai)
+## License
+
+MIT. See [LICENSE](LICENSE).
+
+The PaidSync MCP service itself is a proprietary managed service. This repository documents how to use it, with example configurations and integration guides. No source code for the hosted server is included.
+
+---
+
+**Maintained by [PaidSync](https://paidsync.ai). Operated by Advanced Technology Labs LLC (Wyoming, USA).**
