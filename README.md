@@ -1,6 +1,6 @@
 # PaidSync. The MCP for Running Ads with AI
 
-> **The only MCP server that runs Google, Meta, LinkedIn, and TikTok ads with full edit access.** Plus GTM, GA4, and GSC. 380+ tools across 7 platforms in one conversation.
+> **The only MCP server that runs Google, Meta, LinkedIn, and TikTok ads with full edit access.** Plus GTM, GA4, and GSC. 309 tools across 8 platforms in one conversation.
 
 [![Meta Business Partner](https://img.shields.io/badge/Meta-Business%20Partner-1877F2)](https://paidsync.ai/meta-ads-mcp)
 [![LinkedIn Marketing Partner](https://img.shields.io/badge/LinkedIn-Marketing%20Partner-0A66C2)](https://paidsync.ai/linkedin-ads-mcp)
@@ -48,7 +48,7 @@ If you are running real ad spend and tired of switching tools to do basic optimi
 | Google Analytics 4 | 25+ | Full edit (conversion events, audiences, custom dimensions) | n/a |
 | Google Search Console | 10+ | Read access (paid + organic blend reporting) | n/a |
 
-**Total: 380+ executable tools** in a single MCP endpoint.
+**Total: 309 executable tools** in a single MCP endpoint.
 
 ---
 
