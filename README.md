@@ -2,6 +2,7 @@
 
 > **The only MCP server that runs Google, Meta, LinkedIn, and TikTok ads with full edit access.** Plus GTM, GA4, and GSC. 309 tools across 8 platforms in one conversation.
 
+[![Google Premier Partner](https://img.shields.io/badge/Google-Premier%20Partner-4285F4)](https://paidsync.ai/google-ads-mcp)
 [![Meta Business Partner](https://img.shields.io/badge/Meta-Business%20Partner-1877F2)](https://paidsync.ai/meta-ads-mcp)
 [![LinkedIn Marketing Partner](https://img.shields.io/badge/LinkedIn-Marketing%20Partner-0A66C2)](https://paidsync.ai/linkedin-ads-mcp)
 [![TikTok Marketing Partner](https://img.shields.io/badge/TikTok-Marketing%20Partner-000000)](https://paidsync.ai/tiktok-ads-mcp)
@@ -414,10 +415,11 @@ If you maintain an MCP server for ads or marketing and would like to be listed, 
 
 ## Partner credentials
 
+- **Google Premier Partner**, founder Ahmed Ashraf (top 3% globally), $500M+ in ad spend managed across a decade in paid media
 - **Meta Business Partner**, verified via Meta Marketing Partner Program
 - **LinkedIn Marketing Partner**, full WRITE access (most MCPs do not have this)
 - **TikTok Marketing Partner**, verified TikTok integration
-- Founder Ahmed Ashraf, **Google Premier Partner** (top 3% globally), $500M+ in ad spend managed across a decade in paid media
+- PaidSync is the only MCP server for advertising that holds verified status across all four ad platforms concurrently
 
 ---
 
