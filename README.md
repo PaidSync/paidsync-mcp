@@ -1,6 +1,6 @@
 # PaidSync. The MCP for Running Ads with AI
 
-> **The only MCP server that runs Google, Meta, LinkedIn, and TikTok ads with full edit access.** Plus GTM, GA4, and GSC. 309 tools across 8 platforms in one conversation.
+> **The only MCP server that runs Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, and Microsoft ads from one conversation.** Plus GA4, Google Tag Manager, Search Console, and Merchant Center. 430+ tools across 13 platforms (9 ad platforms plus 4 measurement and config platforms).
 
 [![Google Premier Partner](https://img.shields.io/badge/Google-Premier%20Partner-4285F4)](https://paidsync.ai/google-ads-mcp)
 [![Meta Business Partner](https://img.shields.io/badge/Meta-Business%20Partner-1877F2)](https://paidsync.ai/meta-ads-mcp)
@@ -17,9 +17,9 @@
 
 Most MCP servers for ads are read-only. Google's native Google Ads MCP is read-only. ppc.io is read-only. GoMarble is read-only with write in private beta. Meta's AI Ads Connector edits Meta, nothing else.
 
-PaidSync is the one MCP that lets AI act. Across four ad platforms (Google, Meta, LinkedIn, TikTok), three tracking platforms (Google Tag Manager, Google Analytics 4, Google Search Console), in one conversation.
+PaidSync is the one MCP that lets AI act. Across nine ad platforms (Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, Microsoft), plus four measurement and config platforms (Google Tag Manager, Google Analytics 4, Google Search Console, Google Merchant Center), in one conversation.
 
-That means your AI assistant does not just describe your campaigns. It pauses them. Creates them. Builds audiences. Sets up conversion tracking end to end. Compares ROAS across all four channels. In one chat.
+That means your AI assistant does not just describe your campaigns. It pauses them. Builds audiences. Optimizes spend. Sets up conversion tracking end to end. Compares ROAS across every connected channel. In one chat. On Google, Meta, LinkedIn, and OpenAI it also creates campaigns from scratch. On TikTok, Snapchat, Reddit, Pinterest, and Microsoft it reads, manages, and optimizes the campaigns you launch in-platform.
 
 ---
 
@@ -27,7 +27,7 @@ That means your AI assistant does not just describe your campaigns. It pauses th
 
 PaidSync was built for both ends of the paid media market.
 
-**DTC and ecommerce brands** running their own ad spend across Meta, Google, and TikTok. One operator managing four ad platforms is a recipe for tab fatigue. PaidSync collapses the workflow. Ask Claude to audit, pause, and rebalance. Done in one chat.
+**DTC and ecommerce brands** running their own ad spend across Meta, Google, TikTok, Pinterest, and Snapchat. One operator managing that many ad platforms is a recipe for tab fatigue. PaidSync collapses the workflow. Ask Claude to audit, pause, and rebalance. Done in one chat.
 
 **B2B agencies and consultants** managing 5 to 100+ client accounts. Multi-Client-Center support on Google Ads. Business Manager system user tokens on Meta. Advertiser switching on TikTok. Identity-walk authentication so one user can manage every account across multiple OAuth identities.
 
@@ -37,19 +37,32 @@ If you are running real ad spend and tired of switching tools to do basic optimi
 
 ---
 
-## Supported platforms
+### Ad platforms (9)
 
-| Platform | Tools | Access | Partner status |
+| Platform | Tools | Capability | Partner status |
 |---|---:|---|---|
-| Google Ads | 200+ | Full edit (incl. MCC) | Founder is Google Premier Partner (top 3% globally) |
-| Meta Ads (Facebook + Instagram) | 70+ | Full edit (incl. Business Manager system user tokens) | **Meta Business Partner** |
-| LinkedIn Ads | 30+ | Full WRITE access (most MCPs are read-only) | **LinkedIn Marketing Partner** |
-| TikTok Ads | full | Full edit (incl. advertiser switching) | **TikTok Marketing Partner** |
-| Google Tag Manager | 40+ | Full edit (tags, triggers, variables, workspaces) | n/a |
-| Google Analytics 4 | 25+ | Full edit (conversion events, audiences, custom dimensions) | n/a |
-| Google Search Console | 10+ | Read access (paid + organic blend reporting) | n/a |
+| Google Ads | 138 | Full campaign create + manage (incl. MCC) | Founder is Google Premier Partner (top 3% globally) |
+| Meta Ads (Facebook + Instagram) | 69 | Full campaign create + manage (incl. Business Manager system user tokens) | **Meta Business Partner** |
+| LinkedIn Ads | 25 | Full create + manage (full WRITE, rare among MCPs) | **LinkedIn Marketing Partner** |
+| OpenAI / ChatGPT Ads | 28 | Full campaign create + manage | n/a |
+| TikTok Ads | 13 | Read + manage + optimize (create in TikTok Ads Manager) | **TikTok Marketing Partner** |
+| Snapchat Ads | 15 | Read + manage + optimize (create in Snapchat Ads Manager) | n/a |
+| Reddit Ads | 14 | Read + manage + optimize (create in Reddit Ads Manager) | n/a |
+| Pinterest Ads | 14 | Read + manage + optimize (create in Pinterest Ads Manager) | n/a |
+| Microsoft / Bing Ads | 15 | Read + manage + optimize (create in Microsoft Ads) | n/a |
 
-**Total: 309 executable tools** in a single MCP endpoint.
+### Measurement and config platforms (4)
+
+| Platform | Tools | Capability |
+|---|---:|---|
+| Google Analytics 4 | 28 | Full config + manage (conversion events, audiences, custom dimensions) |
+| Google Tag Manager | 37 | Full edit (tags, triggers, variables, workspaces) |
+| Google Search Console | 6 | Read-only (paid + organic blend reporting) |
+| Google Merchant Center | 15 | Feed + link management |
+
+**Total: 430+ executable tools** across 13 platforms in a single MCP endpoint.
+
+Full campaign creation runs on Google, Meta, LinkedIn, and OpenAI. The other five ad platforms are read, manage, and optimize, because campaign creation on those happens in their own ad managers. PaidSync is honest about the line so your AI assistant never promises an action the platform does not expose.
 
 ---
 
@@ -135,7 +148,7 @@ Edit `~/.codeium/windsurf/mcp_config.json`:
 
 ### 4. Connect your ad accounts
 
-Inside the PaidSync dashboard, connect Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, GTM, GA4, and GSC via OAuth. Each connection takes about 30 seconds. Agency users connect MCC and Business Manager once and gain access to every client account from chat.
+Inside the PaidSync dashboard, connect Google Ads, Meta Ads, LinkedIn Ads, OpenAI Ads, TikTok Ads, Snapchat Ads, Reddit Ads, Pinterest Ads, Microsoft Ads, GA4, GTM, GSC, and Merchant Center via OAuth. Each connection takes about 30 seconds. Agency users connect MCC and Business Manager once and gain access to every client account from chat.
 
 ---
 
@@ -146,6 +159,21 @@ A read-only MCP can tell you that 17 ad groups have CPA over $50. It cannot paus
 PaidSync pauses them. It also tells you the estimated monthly savings. It also flags the keywords driving the high CPA. It also offers to pause those.
 
 The category of "AI for ads" is shifting from describing your data to running your account. PaidSync was built for the second category.
+
+---
+
+## Agent-native architecture with a thin dispatcher
+
+430+ tools is a lot of surface area. Most MCP servers load every tool schema into the model's context the moment you connect. At PaidSync's scale that would burn 50k+ tokens before you have typed a single prompt, which is what happens with servers like Pipeboard and AdKit that register every tool natively.
+
+PaidSync does the opposite. The whole catalog sits behind three meta-tools:
+
+- **`paidsync_context`** returns the live map of what is connected and which capabilities are available.
+- **`paidsync_tool_detail`** pulls the schema for one specific tool only when the model needs it.
+- **`paidsync_exec`** runs the chosen tool.
+
+<!-- verify exact 3k figure before publishing -->
+This dispatcher pattern costs roughly 3k tokens of context instead of 50k+. The model discovers tools on demand and spends the rest of its context budget on your actual work, not on schema it will never call. The 430+ tools are real and executable. They are simply not all dumped into the conversation at once.
 
 ---
 
@@ -233,13 +261,16 @@ of the top 3 issues by Monday morning.
 
 | | PaidSync | Google native MCP | Meta AI Ads Connector | ppc.io | Pipeboard | Adspirer | Ryze AI | Flyweel |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Google Ads edit | yes | no, read-only | no | no, read-only | yes | yes | yes | yes |
-| Meta Ads edit | yes | no | yes Meta-only | no | yes | yes | yes | yes |
-| LinkedIn Ads edit | yes | no | no | no | no | yes | partial | no |
-| TikTok Ads edit | yes | no | no | no | no | yes | no | no |
+| Ad platforms covered | 9 | 1 | 1 | 1 | 1 | 4 | 4 | 2 |
+| Google Ads create + manage | yes | no, read-only | no | no, read-only | yes | yes | yes | yes |
+| Meta Ads create + manage | yes | no | yes Meta-only | no | yes | yes | yes | yes |
+| LinkedIn Ads create + manage | yes | no | no | no | no | yes | partial | no |
+| OpenAI / ChatGPT Ads | yes | no | no | no | no | no | no | no |
+| TikTok / Snapchat / Reddit / Pinterest / Microsoft manage | yes | no | no | no | no | partial | partial | no |
 | GTM edit | yes | no | no | no | no | no | no | no |
 | GA4 edit | yes | no | no | no | no | no | partial | no |
 | Search Console blend | yes | no | no | no | no | no | no | no |
+| Merchant Center feed + links | yes | no | no | no | no | no | no | no |
 | End-to-end conversion tracking | yes | no | no | no | no | no | no | no |
 | Wasted-spend audits | yes | no | no | no | no | no | partial | no |
 | PMax asset-group insights | yes | no | no | no | no | no | partial | no |
@@ -262,7 +293,7 @@ Full comparison: [paidsync.ai/compare](https://paidsync.ai/compare)
 | Team | Quote | Quote | Custom |
 | Enterprise | Quote | Quote | Custom |
 
-All platforms (Google, Meta, LinkedIn, TikTok, GTM, GA4, GSC), MCC support, and Business Manager system user tokens are included on every plan, including free.
+All 13 platforms (Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, Microsoft, GA4, GTM, GSC, Merchant Center), every tool, MCC support, and Business Manager system user tokens are included on every plan, including free.
 
 [Start free at paidsync.ai/signup](https://paidsync.ai/signup)
 
@@ -270,7 +301,7 @@ All platforms (Google, Meta, LinkedIn, TikTok, GTM, GA4, GSC), MCC support, and 
 
 ## Why PaidSync is different
 
-1. **Edit access on every channel that matters.** Google's native MCP is read-only. Most competitors stop at one or two platforms. PaidSync runs four ad platforms plus GTM plus GA4 with full edit.
+1. **Edit access on every channel that matters.** Google's native MCP is read-only. Most competitors stop at one or two platforms. PaidSync runs nine ad platforms plus GA4, GTM, GSC, and Merchant Center. Full campaign creation on Google, Meta, LinkedIn, and OpenAI. Read, manage, and optimize on TikTok, Snapchat, Reddit, Pinterest, and Microsoft.
 
 2. **Conversion tracking by chat.** No other MCP server lets AI set up conversion tracking end to end. PaidSync's composite tools create the GA4 event, build the GTM tag and trigger, and link the conversion to Google Ads in one prompt.
 
@@ -345,11 +376,11 @@ MCP is an open standard, originally introduced by Anthropic, that lets AI assist
 
 ### How is PaidSync different from Adspirer or Ryze AI?
 
-Adspirer covers Google, Meta, LinkedIn at a basic feature level. Ryze AI covers similar ground plus TikTok. PaidSync covers all four ad platforms plus end-to-end conversion tracking through GTM and GA4, plus paid + organic blending through Search Console. PaidSync is the only one with full LinkedIn write access. See the comparison table above or [paidsync.ai/compare](https://paidsync.ai/compare).
+Adspirer covers Google, Meta, LinkedIn at a basic feature level. Ryze AI covers similar ground plus TikTok. PaidSync covers nine ad platforms (Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, Microsoft) plus end-to-end conversion tracking through GTM and GA4, plus paid + organic blending through Search Console, plus Merchant Center feed and link management. PaidSync is the only one with full LinkedIn write access. See the comparison table above or [paidsync.ai/compare](https://paidsync.ai/compare).
 
 ### How is PaidSync different from Google's native Google Ads MCP?
 
-Google's native Google Ads MCP is read-only. PaidSync has full edit access on Google Ads (plus Meta, LinkedIn, TikTok, GTM, GA4). Read-only means the AI can describe what is wrong. PaidSync means the AI can also fix it.
+Google's native Google Ads MCP is read-only. PaidSync has full edit access on Google Ads (plus Meta, LinkedIn, OpenAI, GA4, GTM, and management across TikTok, Snapchat, Reddit, Pinterest, Microsoft). Read-only means the AI can describe what is wrong. PaidSync means the AI can also fix it.
 
 ### Can PaidSync set up conversion tracking?
 
@@ -386,10 +417,7 @@ Identity walking. When you connect Google Ads, PaidSync discovers every account 
 What is in development. No fixed dates, in priority order.
 
 - **Operator agent**: a fully autonomous brand onboarding flow that takes a URL and stands up a complete paid media stack (Google + Meta + tracking) with approval gates. In beta at operator.paidsync.ai.
-- **Pinterest Ads**: scoping the partner application
 - **X (Twitter) Ads**: scoping
-- **Reddit Ads**: scoping
-- **Snapchat Ads**: scoping
 - **More verticals in the audit layer**: real estate, automotive, fintech
 - **Multi-brand workspaces**: shared API key with role-based access for agency teams
 - **Self-hosted deployment**: enterprise plan, run PaidSync in your own cloud
@@ -419,7 +447,7 @@ If you maintain an MCP server for ads or marketing and would like to be listed, 
 - **Meta Business Partner**, verified via Meta Marketing Partner Program
 - **LinkedIn Marketing Partner**, full WRITE access (most MCPs do not have this)
 - **TikTok Marketing Partner**, verified TikTok integration
-- PaidSync is the only MCP server for advertising that holds verified status across all four ad platforms concurrently
+- PaidSync is the only MCP server for advertising that holds verified partner status across Google, Meta, LinkedIn, and TikTok concurrently
 
 ---
 

@@ -29,9 +29,9 @@ paying for the same user twice in one week?
 ```
 
 ```
-What was my total ad spend across all 4 platforms last month? Break it down by
-platform, then by campaign, then by ad group. Show me the top 10 line items
-by spend.
+What was my total ad spend across all my connected platforms last month? Break
+it down by platform, then by campaign, then by ad group. Show me the top 10
+line items by spend.
 ```
 
 ```
@@ -434,8 +434,8 @@ same date range. Why is there a 30% discrepancy?
 ## Composite workflows (multi-step in one prompt)
 
 ```
-End-of-day routine: pull today's spend across all 4 platforms. Compare to
-the 30-day daily average. Flag anything more than 2 standard deviations
+End-of-day routine: pull today's spend across all your connected platforms.
+Compare to the 30-day daily average. Flag anything more than 2 standard deviations
 above or below. Pause any campaign where today's CPA is 50%+ above its
 30-day average.
 ```

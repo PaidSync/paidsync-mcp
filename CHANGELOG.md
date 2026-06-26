@@ -4,6 +4,15 @@ All notable changes to PaidSync.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2026-06-26]
+
+### Added
+- 430+ tools across 13 platforms (9 ad platforms plus 4 measurement and config platforms). New ad platforms live: Snapchat, Reddit, Pinterest, Microsoft / Bing Ads, and OpenAI / ChatGPT Ads. New measurement surface: Google Merchant Center feed and link management.
+- Thin-dispatcher architecture. The full catalog sits behind three meta-tools (`paidsync_context`, `paidsync_tool_detail`, `paidsync_exec`) so tools load on demand instead of dumping every schema into the model's context.
+
+### Changed
+- Full campaign creation is available on Google, Meta, LinkedIn, and OpenAI. TikTok, Snapchat, Reddit, Pinterest, and Microsoft are read, manage, and optimize (campaign creation happens in each platform's own ad manager).
+
 ## [2026-05-11]
 
 ### Added
