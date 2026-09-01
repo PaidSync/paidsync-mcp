@@ -1,6 +1,6 @@
 # PaidSync. The MCP for Running Ads with AI
 
-> **The only MCP server that runs Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, and Microsoft ads from one conversation.** Plus GA4, Google Tag Manager, Search Console, and Merchant Center. 430+ tools across 13 platforms (9 ad platforms plus 4 measurement and config platforms).
+> **The only MCP server that runs Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, Microsoft, and X ads from one conversation.** Plus GA4, Google Tag Manager, Search Console, and Merchant Center. 460+ tools across 14 platforms (9 ad platforms plus 4 measurement and config platforms).
 
 [![Google Premier Partner](https://img.shields.io/badge/Google-Premier%20Partner-4285F4)](https://paidsync.ai/google-ads-mcp)
 [![Meta Business Partner](https://img.shields.io/badge/Meta-Business%20Partner-1877F2)](https://paidsync.ai/meta-ads-mcp)
@@ -60,7 +60,7 @@ If you are running real ad spend and tired of switching tools to do basic optimi
 | Google Search Console | 6 | Read-only (paid + organic blend reporting) |
 | Google Merchant Center | 15 | Feed + link management |
 
-**Total: 430+ executable tools** across 13 platforms in a single MCP endpoint.
+**Total: 460+ executable tools** across 14 platforms in a single MCP endpoint.
 
 Full campaign creation runs on Google, Meta, LinkedIn, and OpenAI. The other five ad platforms are read, manage, and optimize, because campaign creation on those happens in their own ad managers. PaidSync is honest about the line so your AI assistant never promises an action the platform does not expose.
 
@@ -164,7 +164,7 @@ The category of "AI for ads" is shifting from describing your data to running yo
 
 ## Agent-native architecture with a thin dispatcher
 
-430+ tools is a lot of surface area. Most MCP servers load every tool schema into the model's context the moment you connect. At PaidSync's scale that would burn 50k+ tokens before you have typed a single prompt, which is what happens with servers like Pipeboard and AdKit that register every tool natively.
+460+ tools is a lot of surface area. Most MCP servers load every tool schema into the model's context the moment you connect. At PaidSync's scale that would burn 50k+ tokens before you have typed a single prompt, which is what happens with servers like Pipeboard and AdKit that register every tool natively.
 
 PaidSync does the opposite. The whole catalog sits behind three meta-tools:
 
@@ -173,7 +173,7 @@ PaidSync does the opposite. The whole catalog sits behind three meta-tools:
 - **`paidsync_exec`** runs the chosen tool.
 
 <!-- verify exact 3k figure before publishing -->
-This dispatcher pattern costs roughly 3k tokens of context instead of 50k+. The model discovers tools on demand and spends the rest of its context budget on your actual work, not on schema it will never call. The 430+ tools are real and executable. They are simply not all dumped into the conversation at once.
+This dispatcher pattern costs roughly 3k tokens of context instead of 50k+. The model discovers tools on demand and spends the rest of its context budget on your actual work, not on schema it will never call. The 460+ tools are real and executable. They are simply not all dumped into the conversation at once.
 
 ---
 
@@ -293,7 +293,7 @@ Full comparison: [paidsync.ai/compare](https://paidsync.ai/compare)
 | Team | Quote | Quote | Custom |
 | Enterprise | Quote | Quote | Custom |
 
-All 13 platforms (Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, Microsoft, GA4, GTM, GSC, Merchant Center), every tool, MCC support, and Business Manager system user tokens are included on every plan, including free.
+All 14 platforms (Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, Microsoft, X Ads, GA4, GTM, GSC, Merchant Center), every tool, MCC support, and Business Manager system user tokens are included on every plan, including free.
 
 [Start free at paidsync.ai/signup](https://paidsync.ai/signup)
 

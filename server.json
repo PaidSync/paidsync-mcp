@@ -1,12 +1,14 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
-  "name": "ai.paidsync/ads-mcp",
-  "description": "Run Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, and Microsoft ads through AI. 430+ tools across 13 platforms (9 ad platforms plus 4 measurement and config platforms: GA4, Google Tag Manager, Search Console, Merchant Center). Account audits, wasted spend detection, PMax insights, end-to-end conversion-tracking setup with GTM and GA4, and full campaign management. Full campaign creation on Google, Meta, LinkedIn, and OpenAI; read, manage, and optimize on TikTok, Snapchat, Reddit, Pinterest, and Microsoft. Meta Business Partner, LinkedIn Marketing Partner, TikTok Marketing Partner. Agency-grade with MCC and Business Manager support.",
-  "version": "2.0.0",
+  "name": "io.github.PaidSync/paidsync",
+  "description": "Run ads on Google, Meta, LinkedIn, TikTok and more from AI. 460+ tools across 14 platforms.",
+  "version": "2.1.0",
   "remotes": [
     {
       "type": "streamable-http",
       "url": "https://mcp.paidsync.ai/mcp"
     }
-  ]
+  ],
+  "websiteUrl": "https://paidsync.ai",
+  "title": "PaidSync.ai"
 }
