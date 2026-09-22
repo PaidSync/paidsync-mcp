@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
   "name": "io.github.PaidSync/paidsync",
-  "description": "Run ads on Google, Meta, LinkedIn, TikTok and more from AI. 460+ tools across 14 platforms.",
-  "version": "2.1.0",
+  "description": "Run ads on Google, Meta, LinkedIn, TikTok and more from AI. 530+ tools across 14 platforms.",
+  "version": "2.2.0",
   "remotes": [
     {
       "type": "streamable-http",
