@@ -284,14 +284,12 @@ Full comparison: [paidsync.ai/compare](https://paidsync.ai/compare)
 
 ## Pricing
 
-| Plan | Monthly | Annual | API calls/mo |
-|---|---:|---:|---:|
-| Free | $0 | n/a | 15 |
-| Plus | $49 | $490 | 150 |
-| Pro | $99 | $999 | 600 |
-| Max | $199 | $2,000 | 4,000 |
-| Team | Quote | Quote | Custom |
-| Enterprise | Quote | Quote | Custom |
+| Plan | Monthly | API calls/mo |
+|---|---:|---:|
+| Free | $0 | 15 |
+| Pro | from $99 | 600, 1,200 or 4,000 |
+| Team | from $249 | 6,000 shared across 5 seats |
+| Done For You | Quote | Custom |
 
 All 14 platforms (Google, Meta, LinkedIn, OpenAI, TikTok, Snapchat, Reddit, Pinterest, Microsoft, X Ads, GA4, GTM, GSC, Merchant Center), every tool, MCC support, and Business Manager system user tokens are included on every plan, including free.
 
@@ -360,7 +358,7 @@ Both. PaidSync uses the open Model Context Protocol. It works with Claude (Deskt
 
 ### Is there a free tier?
 
-Yes. 15 API calls per month, all platforms included. Free tier is enough to test the connection and run a couple of audits. Paid plans start at $49/mo.
+Yes. 15 API calls per month, all platforms included. Free tier is enough to test the connection and run a couple of audits. Paid plans start at $99/mo.
 
 ### Can the AI run wild and burn my ad spend?
 
