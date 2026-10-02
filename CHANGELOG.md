@@ -4,6 +4,16 @@ All notable changes to PaidSync.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2026-10-02]
+
+### Changed
+- 610+ tools across 14 platforms (10 ad platforms plus GA4, Google Tag Manager, Search Console and Merchant Center)
+- New campaigns are built on Google Ads, Meta, LinkedIn and ChatGPT Ads; existing campaigns are managed on TikTok, Microsoft, Snapchat, Reddit, Pinterest and X. Search Console is read-only in PaidSync
+- Setup is sign-in only: add `https://mcp.paidsync.ai/mcp` and sign in. No API key in the URL; headless runs send the key in an `Authorization` header
+
+### Corrected
+- Earlier entries below list a LinkedIn Marketing Partner status and the retired Plus and Max pricing tiers. PaidSync does not hold a LinkedIn Marketing Partner status, and current pricing is Free, Pro from $99 a month and Team from $249 a month
+
 ## [2026-06-26]
 
 ### Added

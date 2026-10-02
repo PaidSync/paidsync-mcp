@@ -1,96 +1,70 @@
 # PaidSync MCP -- Installation Guide for AI Agents
 
-> This file is for AI agents (Cline, Claude, Cursor, Windsurf). It tells you exactly how to help a user connect PaidSync.
+> This file is for AI agents (Claude, Claude Code, Cursor and other MCP clients). It tells you exactly how to help a user connect PaidSync.
 
 ## What PaidSync does
 
-PaidSync is a hosted MCP server that gives your AI assistant 610+ executable tools across 14 platforms:
+PaidSync is a hosted MCP server that gives your AI assistant 610+ tools across 14 platforms:
 
-- **Ad platforms (10):** Google Ads, Meta (Facebook + Instagram), LinkedIn Ads, ChatGPT Ads, TikTok Ads, Snapchat Ads, Reddit Ads, Pinterest Ads, Microsoft/Bing Ads, X Ads
+- **Ad platforms (10):** Google Ads, Meta (Facebook + Instagram), LinkedIn Ads, ChatGPT Ads, TikTok Ads, Snapchat Ads, Reddit Ads, Pinterest Ads, Microsoft (Bing) Ads, X Ads
 - **Measurement and config (4):** Google Analytics 4, Google Tag Manager, Google Search Console, Google Merchant Center
 
-Full read and write access across all 10 ad platforms and GTM, GA4, Merchant Center. Search Console is read-only by Google API design.
+PaidSync builds new campaigns on Google Ads, Meta, LinkedIn and ChatGPT Ads, and manages existing campaigns on TikTok, Microsoft, Snapchat, Reddit, Pinterest and X. It reads and changes GA4, Google Tag Manager and Merchant Center. Search Console is read-only in PaidSync.
 
-Free tier: 15 API calls per month. Paid plans for heavier use.
+Free for 15 tasks a month with no credit card, then priced by usage, from $99 a month for 600 tasks.
 
 ## How to install PaidSync
 
-### Step 1 -- Get an API key
+No API key is needed. The server URL is `https://mcp.paidsync.ai/mcp` (streamable HTTP). The user signs in to PaidSync when the client asks (free account, no card), then connects their ad accounts.
 
-Tell the user: "Go to https://paidsync.ai/signup, create a free account, then open https://paidsync.ai/dashboard and copy your MCP URL. It will look like this: `https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY`"
+### Claude (web, desktop and mobile)
 
-The API key is embedded in the URL query string. The base endpoint is `https://mcp.paidsync.ai/mcp`.
+Tell the user: open PaidSync in Claude's connector directory (https://claude.ai/directory/connectors/paidsync-mcpp), click Connect, sign in to PaidSync and approve, then connect an ad account and ask.
 
-### Step 2 -- Add to this editor
+### ChatGPT
 
-#### Cline (VS Code extension)
+Tell the user: open Plugins in ChatGPT, search for PaidSync and install it, sign in and approve, then connect an ad account and ask.
 
-In the Cline MCP settings panel, add a remote server:
-- **Name:** `paidsync`
-- **URL:** `https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY`
-- **Transport:** HTTP (streamable HTTP)
-
-#### Claude Code (CLI)
+### Claude Code (CLI)
 
 ```bash
-claude mcp add paidsync https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY
+claude mcp add --transport http paidsync https://mcp.paidsync.ai/mcp
 ```
 
-#### Cursor
+Then run `/mcp` in Claude Code and sign in with the PaidSync login.
 
-Add to `.cursor/mcp.json` in the workspace:
+### Cursor
+
+Add to `.cursor/mcp.json` in the workspace (or `~/.cursor/mcp.json` for all projects), then open Cursor Settings, MCP, and sign in with the PaidSync login:
 
 ```json
 {
   "mcpServers": {
     "paidsync": {
-      "url": "https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY"
+      "url": "https://mcp.paidsync.ai/mcp"
     }
   }
 }
 ```
 
-#### Windsurf / Devin Desktop
+### Other MCP clients
 
-Add to `~/.codeium/windsurf/mcp_config.json`:
+Add `https://mcp.paidsync.ai/mcp` as a remote (streamable HTTP) server and sign in when the client asks. For headless runs that cannot sign in, send the user's PaidSync API key in a header (`Authorization: Bearer <key>`), never in the URL, where it would end up in logs.
 
-```json
-{
-  "mcpServers": {
-    "paidsync": {
-      "url": "https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY"
-    }
-  }
-}
-```
+### Connect ad accounts
 
-#### Claude Desktop
-
-Add to `claude_desktop_config.json` (Settings > Developer > Edit Config):
-
-```json
-{
-  "mcpServers": {
-    "paidsync": {
-      "url": "https://mcp.paidsync.ai/mcp?key=YOUR_API_KEY"
-    }
-  }
-}
-```
-
-### Step 3 -- Connect ad accounts
-
-After adding the MCP server, tell the user to go to https://paidsync.ai/dashboard and connect their ad platform accounts via OAuth. Each connection takes about 30 seconds.
+After the server is added, the user connects each ad platform through its own sign-in, from the chat or at https://paidsync.ai/dashboard.
 
 ## Architecture note for AI agents
 
-PaidSync uses a thin-dispatcher pattern. When connected, you will see three meta-tools:
+PaidSync uses a thin-dispatcher pattern. When connected, you will see a small set of meta-tools, including:
 
 - `paidsync_context` -- call this first in every session to see what platforms are connected and what tools are available
 - `paidsync_tool_detail` -- fetch the schema for a specific tool on demand
-- `paidsync_exec` -- run any tool
+- `paidsync_read` -- run a read-only tool without an approval prompt
+- `paidsync_exec` -- run any tool, including changes
 
-Always call `paidsync_context` first. It returns the live capability map so you know what accounts are connected and which operations are available. Do not try to guess tool names; discover them from context.
+Always call `paidsync_context` first. It returns the live capability map so you know what accounts are connected and which operations are available. Do not guess tool names; discover them from context.
 
 ## Example prompts to suggest to users
 
@@ -99,22 +73,22 @@ Compare ROAS across all connected platforms for the last 30 days. Show me the wo
 ```
 
 ```
-Audit my Google Ads account. Find wasted spend, high CPA ad groups, and low-quality score keywords.
+Audit my Google Ads account. Find wasted spend, high CPA ad groups, and low Quality Score keywords.
 ```
 
 ```
-Set up conversion tracking for my website. Create a GA4 event, push it through GTM, and link it to Google Ads and Meta.
+Set up conversion tracking for my website. Create a GA4 event, push it through GTM, and link it to Google Ads.
 ```
 
 ```
-Pause all campaigns where CPA is more than 2x the target. Show me the estimated monthly savings.
+Find the keywords that spent the most last month with no conversions, and preview pausing them.
 ```
 
 ## Troubleshooting
 
-- **No tools appear:** Call `paidsync_context` to verify the connection. If it fails, the API key in the URL is likely wrong or expired.
-- **Platform not available:** Go to https://paidsync.ai/dashboard and connect that platform via OAuth first.
-- **Rate limit (free tier):** Free accounts get 15 calls/month. Upgrade at https://paidsync.ai/pricing.
+- **No tools appear:** call `paidsync_context` to verify the connection. If sign-in did not finish, remove the server and add it again, then sign in.
+- **Platform not available:** connect that platform first, from the chat or at https://paidsync.ai/dashboard.
+- **Out of tasks (free plan):** the free plan includes 15 tasks a month. Upgrade at https://paidsync.ai/pricing.
 
 ## Links
 
