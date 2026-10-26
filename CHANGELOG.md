@@ -4,6 +4,12 @@ All notable changes to PaidSync.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [2026-10-26]
+
+### Corrected
+- Tool count: 630+ tools across 14 platforms (the live count on paidsync.ai and in the website's count file since 15 Oct); README, install guide and server.json said 610+
+- Package version 2.3.2 for the registry entry that carries the corrected description
+
 ## [2026-10-02]
 
 ### Changed
