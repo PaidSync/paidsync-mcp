@@ -1,6 +1,6 @@
 # PaidSync. The MCP for Running Ads with AI
 
-> PaidSync connects Claude, ChatGPT and other AI assistants to your ad accounts. It builds new campaigns on Google Ads, Meta, LinkedIn and ChatGPT Ads, and manages existing campaigns on TikTok, Microsoft, Snapchat, Reddit, Pinterest and X. Plus Google Analytics 4, Google Tag Manager, Search Console (read-only) and Merchant Center. 610+ tools across 14 platforms.
+> PaidSync connects Claude, ChatGPT and other AI assistants to your ad accounts. It builds new campaigns on Google Ads, Meta, LinkedIn and ChatGPT Ads, and manages existing campaigns on TikTok, Microsoft, Snapchat, Reddit, Pinterest and X. Plus Google Analytics 4, Google Tag Manager, Search Console (read-only) and Merchant Center. 630+ tools across 14 platforms.
 
 [![Google Partner](https://img.shields.io/badge/Google-Partner-4285F4)](https://paidsync.ai/google-ads-mcp)
 [![Meta Business Partner](https://img.shields.io/badge/Meta-Business%20Partner-1877F2)](https://paidsync.ai/meta-ads-mcp)
@@ -60,7 +60,7 @@ If you are running real ad spend and tired of switching tools to do basic optimi
 | Google Search Console | 6 | Read-only in PaidSync (paid plus organic reporting) |
 | Google Merchant Center | 16 | Products, supplemental feeds and Google Ads links |
 
-**Total: 610+ executable tools** across 14 platforms in a single MCP endpoint. The platform rows add up to fewer than 610 because some tools, such as connect, account and cross-channel report tools, belong to no single platform.
+**Total: 630+ executable tools** across 14 platforms in a single MCP endpoint. The platform rows add up to fewer than 630 because some tools, such as connect, account and cross-channel report tools, belong to no single platform.
 
 New campaigns are built on Google Ads, Meta, LinkedIn and ChatGPT Ads. On the other six ad platforms PaidSync manages the campaigns you create in their own ad managers. PaidSync is honest about the line so your AI assistant never promises an action the platform does not expose.
 
@@ -90,7 +90,7 @@ Free for 15 tasks a month with no credit card, then priced by usage, from $99 a 
 
 ## Agent-native architecture with a thin dispatcher
 
-610+ tools is a lot of surface area. Loading every tool schema into the model's context the moment you connect would burn a large share of the context window before you have typed a single prompt.
+630+ tools is a lot of surface area. Loading every tool schema into the model's context the moment you connect would burn a large share of the context window before you have typed a single prompt.
 
 PaidSync does the opposite. The whole catalog sits behind three meta-tools:
 
@@ -98,7 +98,7 @@ PaidSync does the opposite. The whole catalog sits behind three meta-tools:
 - **`paidsync_tool_detail`** pulls the schema for one specific tool only when the model needs it.
 - **`paidsync_exec`** runs the chosen tool.
 
-The model discovers tools on demand and spends the rest of its context budget on your actual work, not on schema it will never call. The 610+ tools are real and executable. They are simply not all dumped into the conversation at once.
+The model discovers tools on demand and spends the rest of its context budget on your actual work, not on schema it will never call. The 630+ tools are real and executable. They are simply not all dumped into the conversation at once.
 
 ---
 

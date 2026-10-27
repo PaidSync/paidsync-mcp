@@ -4,7 +4,7 @@
 
 ## What PaidSync does
 
-PaidSync is a hosted MCP server that gives your AI assistant 610+ tools across 14 platforms:
+PaidSync is a hosted MCP server that gives your AI assistant 630+ tools across 14 platforms:
 
 - **Ad platforms (10):** Google Ads, Meta (Facebook + Instagram), LinkedIn Ads, ChatGPT Ads, TikTok Ads, Snapchat Ads, Reddit Ads, Pinterest Ads, Microsoft (Bing) Ads, X Ads
 - **Measurement and config (4):** Google Analytics 4, Google Tag Manager, Google Search Console, Google Merchant Center
