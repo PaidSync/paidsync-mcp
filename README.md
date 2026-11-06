@@ -1,6 +1,6 @@
 # PaidSync. The MCP for Running Ads with AI
 
-> PaidSync connects Claude, ChatGPT and other AI assistants to your ad accounts. It builds new campaigns on Google Ads, Meta, LinkedIn and ChatGPT Ads, and manages existing campaigns on TikTok, Microsoft, Snapchat, Reddit, Pinterest and X. Plus Google Analytics 4, Google Tag Manager, Search Console (read-only) and Merchant Center. 630+ tools across 14 platforms.
+> PaidSync connects Claude, ChatGPT and other AI assistants to your ad accounts. It builds new campaigns on Google Ads, Meta, LinkedIn, TikTok, Microsoft and ChatGPT Ads, and manages existing campaigns on Snapchat, Reddit, Pinterest and X. Plus Google Analytics 4, Google Tag Manager, Search Console (read-only) and Merchant Center. 630+ tools across 14 platforms.
 
 [![Google Partner](https://img.shields.io/badge/Google-Partner-4285F4)](https://paidsync.ai/google-ads-mcp)
 [![Meta Business Partner](https://img.shields.io/badge/Meta-Business%20Partner-1877F2)](https://paidsync.ai/meta-ads-mcp)
@@ -16,7 +16,7 @@
 
 PaidSync is a hosted MCP server that lets your AI assistant act on your ad accounts, not just describe them. One connection covers ten ad platforms (Google Ads, Meta, LinkedIn, ChatGPT Ads, TikTok, Microsoft, Snapchat, Reddit, Pinterest and X) plus four measurement and tracking platforms (Google Analytics 4, Google Tag Manager, Google Search Console and Google Merchant Center).
 
-On Google Ads, Meta, LinkedIn and ChatGPT Ads it builds new campaigns. On TikTok, Microsoft, Snapchat, Reddit, Pinterest and X it manages the campaigns you already run there. Search Console is read-only in PaidSync.
+On Google Ads, Meta, LinkedIn, TikTok, Microsoft (Search and Performance Max) and ChatGPT Ads it builds new campaigns. On Snapchat, Reddit, Pinterest and X it manages the campaigns you already run there. Search Console is read-only in PaidSync.
 
 PaidSync changes campaign settings only. It never moves money or processes payments, and billing stays directly between you and each ad platform.
 
@@ -40,16 +40,16 @@ If you are running real ad spend and tired of switching tools to do basic optimi
 
 | Platform | Tools | Capability | Partner status |
 |---|---:|---|---|
-| Google Ads | 152 | Builds new campaigns and manages existing ones (incl. MCC) | **Google Partner** |
-| Meta Ads (Facebook + Instagram) | 83 | Builds new campaigns and manages existing ones (incl. Business Manager system user tokens) | **Meta Business Partner** |
+| Google Ads | 158 | Builds new campaigns and manages existing ones (incl. MCC) | **Google Partner** |
+| Meta Ads (Facebook + Instagram) | 92 | Builds new campaigns and manages existing ones (incl. Business Manager system user tokens) | **Meta Business Partner** |
 | LinkedIn Ads | 34 | Builds new campaigns and manages existing ones (campaign groups, campaigns and Sponsored Content ads start as drafts) | n/a |
 | ChatGPT Ads | 28 | Builds new campaigns and manages existing ones | n/a |
-| TikTok Ads | 13 | Manages existing campaigns (create in TikTok Ads Manager) | **TikTok Marketing Partner** |
+| TikTok Ads | 24 | Builds new campaigns and manages existing ones | **TikTok Marketing Partner** |
+| Microsoft Ads (Bing) | 156 | Builds new campaigns (Search and Performance Max) and manages existing ones | n/a |
 | Snapchat Ads | 15 | Manages existing campaigns (create in Snapchat Ads Manager) | n/a |
 | Reddit Ads | 14 | Manages existing campaigns (create in Reddit Ads Manager) | n/a |
 | Pinterest Ads | 14 | Manages existing campaigns (create in Pinterest Ads Manager) | n/a |
 | X Ads | 14 | Manages existing campaigns (create in X Ads Manager) | n/a |
-| Microsoft Ads (Bing) | 133 | Manages existing campaigns (create in Microsoft Ads) | n/a |
 
 ### Measurement and tracking platforms (4)
 
@@ -60,9 +60,9 @@ If you are running real ad spend and tired of switching tools to do basic optimi
 | Google Search Console | 6 | Read-only in PaidSync (paid plus organic reporting) |
 | Google Merchant Center | 16 | Products, supplemental feeds and Google Ads links |
 
-**Total: 630+ executable tools** across 14 platforms in a single MCP endpoint. The platform rows add up to fewer than 630 because some tools, such as connect, account and cross-channel report tools, belong to no single platform.
+**Total: 630+ executable tools** across 14 platforms in a single MCP endpoint. Some tools, such as connect, account and cross-channel report tools, belong to no single platform.
 
-New campaigns are built on Google Ads, Meta, LinkedIn and ChatGPT Ads. On the other six ad platforms PaidSync manages the campaigns you create in their own ad managers. PaidSync is honest about the line so your AI assistant never promises an action the platform does not expose.
+New campaigns are built on Google Ads, Meta, LinkedIn, TikTok, Microsoft (Search and Performance Max) and ChatGPT Ads. On the other four ad platforms PaidSync manages the campaigns you create in their own ad managers. PaidSync is honest about the line so your AI assistant never promises an action the platform does not expose.
 
 ---
 
@@ -84,7 +84,7 @@ New campaigns are built on Google Ads, Meta, LinkedIn and ChatGPT Ads. On the ot
 
 Add `https://mcp.paidsync.ai/mcp` as a custom connector (streamable HTTP) and sign in when your client asks. No API key is needed.
 
-Free for 15 tasks a month with no credit card, then priced by usage, from $99 a month for 600 tasks.
+Free for 100 tasks a month with no credit card, then priced by usage, from $99 a month for 1,000 tasks.
 
 ---
 
@@ -171,8 +171,8 @@ For a side-by-side view of PaidSync and other ad connectors, see [paidsync.ai/co
 
 | Plan | Price | Tasks a month |
 |---|---:|---:|
-| Free | $0, no credit card | 15 |
-| Pro | $99 a month, $149 or $199 for larger tiers, or $999 billed yearly for 600 | 600, 1,200 or 4,000 |
+| Free | $0, no credit card | 100 |
+| Pro | $99 a month, $149 or $199 for larger tiers, or $999 billed yearly for 1,000 | 1,000, 2,500 or 6,000 |
 | Team | from $249 a month | shared across seats |
 | Done For You | Quote | Custom |
 
@@ -227,7 +227,7 @@ Both. PaidSync is in Claude's connector directory and in ChatGPT's plugins. It u
 
 ### Is there a free tier?
 
-Yes. Free for 15 tasks a month with no credit card, then priced by usage, from $99 a month for 600 tasks. All 14 platforms are included.
+Yes. Free for 100 tasks a month with no credit card, then priced by usage, from $99 a month for 1,000 tasks. All 14 platforms are included.
 
 ### Can the AI run wild and burn my ad spend?
 
@@ -243,11 +243,11 @@ MCP is an open standard, originally introduced by Anthropic, that lets AI assist
 
 ### How is PaidSync different from other ad connectors?
 
-PaidSync covers ten ad platforms plus Google Analytics 4, Google Tag Manager, Search Console and Merchant Center in one connection, and builds new campaigns on Google Ads, Meta, LinkedIn and ChatGPT Ads. For a side-by-side view, see [paidsync.ai/compare](https://paidsync.ai/compare).
+PaidSync covers ten ad platforms plus Google Analytics 4, Google Tag Manager, Search Console and Merchant Center in one connection, and builds new campaigns on Google Ads, Meta, LinkedIn, TikTok, Microsoft and ChatGPT Ads. For a side-by-side view, see [paidsync.ai/compare](https://paidsync.ai/compare).
 
 ### How is PaidSync different from Google's native Google Ads MCP?
 
-Google's native Google Ads MCP is read-only. PaidSync builds and changes Google Ads campaigns, and does the same on Meta, LinkedIn and ChatGPT Ads. Read-only means the AI can describe what is wrong. PaidSync means the AI can also fix it.
+Google's native Google Ads MCP is read-only. PaidSync builds and changes Google Ads campaigns, and does the same on Meta, LinkedIn, TikTok, Microsoft and ChatGPT Ads. Read-only means the AI can describe what is wrong. PaidSync means the AI can also fix it.
 
 ### Can PaidSync set up conversion tracking?
 
@@ -255,7 +255,7 @@ Yes. Tell Claude what you want to track and on which page. PaidSync creates the 
 
 ### What about TikTok?
 
-PaidSync manages existing TikTok campaigns with 13 tools (pause, enable, budgets, bids and names) next to Google, Meta and LinkedIn in one chat, with advertiser switching and performance reporting. We are a TikTok Marketing Partner.
+PaidSync builds new TikTok campaigns and manages existing ones (pause, enable, budgets, bids and names) with 24 tools, next to Google, Meta and LinkedIn in one chat, with advertiser switching and performance reporting. We are a TikTok Marketing Partner.
 
 ### Is my data safe?
 
